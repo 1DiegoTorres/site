@@ -166,12 +166,25 @@ footer {
   background: #f8f8f8;
 }
 
-/* MOBILE - ATUALIZADO (Ícones e Labels escondidos) */
+/* MOBILE - AJUSTE FINAL PARA IPHONE */
 @media (max-width: 768px) {
-  .hero-img { height: 70vh; }
+  .hero {
+    height: 100vh;
+  }
+
+  .hero-img-wrapper {
+    height: 100%;
+    align-items: flex-end; /* Garante que a imagem cole na base */
+  }
+
+  .hero-img { 
+    height: 80vh; 
+    margin-top: 0; /* Remove a margem que causava o espaço vazio */
+    object-position: bottom;
+  }
+
   header nav.container { flex-direction: column; gap: 10px; }
   
-  /* Esconde os ícones do topo e as palavras Front/Back */
   .social-icons-header, .hero-label { display: none !important; }
 }
 
