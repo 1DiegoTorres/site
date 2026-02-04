@@ -4,11 +4,11 @@ const video2 = document.getElementById("video2");
 const frontLabel = document.querySelector('.hero-label.left');
 const backLabel = document.querySelector('.hero-label.right');
 
-// Ao mover o mouse na seção .hero
-hero.addEventListener("mousemove", (e) => {
+// Função centralizada para alternar os estados visuais
+function toggleHeroState(clientX) {
   const midpoint = window.innerWidth / 2;
 
-  if (e.clientX < midpoint) {
+  if (clientX < midpoint) {
     // Lado esquerdo: vídeo1 e <Front>
     video1.classList.add("active");
     video1.play();
@@ -27,9 +27,20 @@ hero.addEventListener("mousemove", (e) => {
     backLabel.classList.add("visible");
     frontLabel.classList.remove("visible");
   }
+}
+
+// Evento para Desktop (Mouse)
+hero.addEventListener("mousemove", (e) => {
+  toggleHeroState(e.clientX);
 });
 
-// Ao sair da área do hero
+// Evento para Mobile (Touch)
+hero.addEventListener("touchstart", (e) => {
+  // Pega a posição do primeiro toque na tela
+  toggleHeroState(e.touches[0].clientX);
+});
+
+// Ao sair da área do hero (Desktop)
 hero.addEventListener("mouseleave", () => {
   video1.pause();
   video2.pause();
@@ -40,10 +51,9 @@ hero.addEventListener("mouseleave", () => {
   backLabel.classList.remove("visible");
 });
 
-// Autoplay do vídeo1 ao carregar a página
+// Autoplay preventivo ao carregar a página
 window.addEventListener("load", () => {
   video1.play().catch(() => {
-    console.warn("Autoplay bloqueado pelo navegador.");
+    console.warn("Autoplay bloqueado pelo navegador. Interação do usuário necessária.");
   });
 });
-
