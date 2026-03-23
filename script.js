@@ -57,3 +57,40 @@ window.addEventListener("load", () => {
     console.warn("Autoplay bloqueado pelo navegador. Interação do usuário necessária.");
   });
 });
+// PORTFOLIO - Scroll animado nas imagens dos cards
+function animateImageScroll(img) {
+  if (!img) return;
+  function startScroll() {
+    const wrapperHeight = img.parentElement.offsetHeight;
+    const imgHeight = img.naturalHeight * (img.offsetWidth / img.naturalWidth);
+    const maxScroll = Math.max(0, imgHeight - wrapperHeight);
+    let y = 0, dir = 1;
+    setInterval(() => {
+      y += 1.1 * dir;
+      if (y >= maxScroll) dir = -1;
+      if (y <= 0) { dir = 1; y = 0; }
+      img.style.transform = `translateY(-${y}px)`;
+    }, 30);
+  }
+  if (img.complete && img.naturalHeight > 0) startScroll();
+  else img.addEventListener('load', startScroll);
+}
+
+window.addEventListener('load', () => {
+  const img1 = document.getElementById('img1');
+  const img2 = document.getElementById('img2');
+  if (img1) setTimeout(() => animateImageScroll(img1), 600);
+  if (img2) setTimeout(() => animateImageScroll(img2), 1100);
+});
+
+// Clique nos cards abre o site
+document.addEventListener('DOMContentLoaded', () => {
+  const card1 = document.getElementById('card1');
+  const card2 = document.getElementById('card2');
+  if (card1) card1.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('btn-ver')) window.open('https://www.gruposomey.com.br/', '_blank');
+  });
+  if (card2) card2.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('btn-ver')) window.open('https://www.oticasolare.com.br/', '_blank');
+  });
+});
