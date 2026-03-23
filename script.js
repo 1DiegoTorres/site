@@ -57,21 +57,35 @@ window.addEventListener("load", () => {
     console.warn("Autoplay bloqueado pelo navegador. Interação do usuário necessária.");
   });
 });
-// PORTFOLIO - Scroll animado nas imagens dos cards
+// PORTFOLIO - Scroll animado nas imagens dos cards (requestAnimationFrame = sem tremido)
 function animateImageScroll(img) {
   if (!img) return;
+
   function startScroll() {
     const wrapperHeight = img.parentElement.offsetHeight;
     const imgHeight = img.naturalHeight * (img.offsetWidth / img.naturalWidth);
     const maxScroll = Math.max(0, imgHeight - wrapperHeight);
-    let y = 0, dir = 1;
-    setInterval(() => {
-      y += 1.1 * dir;
-      if (y >= maxScroll) dir = -1;
-      if (y <= 0) { dir = 1; y = 0; }
-      img.style.transform = `translateY(-${y}px)`;
-    }, 30);
+
+    let y = 0;
+    let dir = 1;
+    let last = null;
+    const speed = 0.04; // px por ms — ajuste aqui para mais rápido/lento
+
+    function step(timestamp) {
+      if (last !== null) {
+        const delta = timestamp - last;
+        y += speed * delta * dir;
+        if (y >= maxScroll) { y = maxScroll; dir = -1; }
+        if (y <= 0)         { y = 0;         dir =  1; }
+        img.style.transform = `translateY(-${y}px)`;
+      }
+      last = timestamp;
+      requestAnimationFrame(step);
+    }
+
+    requestAnimationFrame(step);
   }
+
   if (img.complete && img.naturalHeight > 0) startScroll();
   else img.addEventListener('load', startScroll);
 }
