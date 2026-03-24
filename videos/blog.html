@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Diego Torres — Dev & Histórias Reais</title>
+  <meta name="description" content="Um dev full stack que veio do comércio. Aqui conto como aprendi a programar com quase 40 anos, as dificuldades reais e o que aprendi no caminho." />
+  <meta name="keywords" content="transição de carreira tech, aprender programação depois dos 30, desenvolvedor full stack, blog programação, Diego Torres dev" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog Diego Torres",
+    "description": "Histórias reais de transição de carreira do comércio para a tecnologia",
+    "author": { "@type": "Person", "name": "Diego Torres" }
+  }
+  </script>
+  <style>
+    /* ── HERO DO BLOG com vídeos (sem foto) ── */
+    .blog-hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .blog-hero .video-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .blog-hero .video-container video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    .blog-hero video.active { opacity: 0.2; }
+
+    /* Texto central do hero */
+    .blog-hero-text {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      padding: 0 20px;
+      pointer-events: none;
+    }
+
+    .blog-hero-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.3);
+      margin-bottom: 18px;
+    }
+
+    .blog-hero-title {
+      font-size: clamp(2.8rem, 8vw, 6rem);
+      font-weight: 800;
+      color: #111;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .blog-hero-title .muted { color: rgba(0,0,0,0.12); }
+
+    .blog-hero-sub {
+      font-size: 1rem;
+      color: rgba(0,0,0,0.4);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    /* Scroll indicator */
+    .scroll-hint {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      opacity: 0.35;
+      animation: bounce 2s infinite;
+    }
+    .scroll-hint span {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #111;
+    }
+    .scroll-hint-arrow { font-size: 1.1rem; color: #111; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ── POSTS SECTION ── */
+    #blog-posts {
+      padding: 100px 20px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .lang-toggle {
+      display: inline-flex;
+      gap: 6px;
+      margin-bottom: 48px;
+      background: rgba(0,0,0,0.04);
+      border-radius: 30px;
+      padding: 4px;
+    }
+    .lang-pill {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 6px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: rgba(0,0,0,0.4);
+      border: none;
+      background: transparent;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .lang-pill.active {
+      background: #111;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .blog-hero-title { letter-spacing: -1px; }
+      .blog-hero .hero-label { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HEADER — IDÊNTICO AO DA HOME ═══ -->
+<header id="header" class="show">
+  <nav class="container">
+    <ul class="menu">
+      <li><a href="index.html#sobre">About</a></li>
+      <li><a href="index.html#portfolio">Works</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html#contato">Contact</a></li>
+    </ul>
+    <div class="social-icons-header">
+      <a href="https://www.instagram.com/eu_torresdiego" target="_blank"><img src="imagens/logotipo-do-instagram.svg" alt="Instagram" /></a>
+      <a href="https://www.linkedin.com/in/diegotorres161186" target="_blank"><img src="imagens/linkedin.svg" alt="LinkedIn" /></a>
+      <a href="https://github.com/1DiegoTorres" target="_blank"><img src="imagens/github.svg" alt="GitHub" /></a>
+    </div>
+  </nav>
+</header>
+
+<!-- ═══ HERO COM VÍDEOS (sem foto) ═══ -->
+<section class="blog-hero hero">
+  <div class="video-container">
+    <video id="blog-video1" src="videos/5495784-uhd_2560_1080_30fps.mp4" autoplay muted loop playsinline></video>
+    <video id="blog-video2" src="videos/6346220-uhd_4096_2160_25fps.mp4" autoplay muted loop playsinline></video>
+    
+  </div>
+
+  <div class="blog-hero-text">
+    <p class="blog-hero-eyebrow">Blog & Reflexões</p>
+    <h1 class="blog-hero-title">
+      <span class="muted">&lt;</span>Código<span class="muted">,</span><br/>
+      Erros<span class="muted">,</span> Recomeços<span class="muted">&gt;</span>
+    </h1>
+    <p class="blog-hero-sub">Histórias reais de quem trocou o balcão pelo terminal. Sem filtro, sem fórmula mágica.</p>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Posts</span>
+    <div class="scroll-hint-arrow">↓</div>
+  </div>
+</section>
+
+<!-- ═══ POSTS ═══ -->
+<section id="blog-posts">
+  <div class="container">
+    <h2>Últimos Posts</h2>
+
+    <div class="lang-toggle">
+      <a href="blog.html" class="lang-pill active">🇧🇷 Português</a>
+      <a href="blog.html" class="lang-pill">🇺🇸 English</a>
+    </div>
+
+    <div class="portfolio-cards">
+
+      <!-- Card 1 -->
+      <div class="browser-card" onclick="window.location='blog/transicao-carreira-comercio-tech.html'" style="cursor:pointer;">
+        <div class="iframe-wrapper blog-thumb career"></div>
+        <div class="glass-wash"></div>
+        <div class="card-overlay"></div>
+        <div class="card-footer">
+          <div class="footer-glass"></div>
+          <div class="footer-content">
+            <div class="tech-tags">
+              <span class="tech-tag">Carreira</span>
+              <span class="tech-tag">⏱ 8 min</span>
+            </div>
+            <div class="blog-card-langs" onclick="event.stopPropagation()">
+              <a href="blog/transicao-carreira-comercio-tech.html" class="btn-ver">🇧🇷 PT</a>
+              <a href="blog/career-transition-retail-to-tech.html" class="btn-ver">🇺🇸 EN</a>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card-title">
+          <p class="blog-card-tag">Carreira</p>
+          <h3>Do comércio ao código: como dar adeus a 15 anos de vendas</h3>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="browser-card" onclick="window.location='blog/aprender-programacao-quase-40-anos.html'" style="cursor:pointer;">
+        <div class="iframe-wrapper blog-thumb age"></div>
+        <div class="glass-wash"></div>
+        <div class="card-overlay"></div>
+        <div class="card-footer">
+          <div class="footer-glass"></div>
+          <div class="footer-content">
+            <div class="tech-tags">
+              <span class="tech-tag">Aprendizado</span>
+              <span class="tech-tag">⏱ 10 min</span>
+            </div>
+            <div class="blog-card-langs" onclick="event.stopPropagation()">
+              <a href="blog/aprender-programacao-quase-40-anos.html" class="btn-ver">🇧🇷 PT</a>
+              <a href="blog/learning-programming-almost-40.html" class="btn-ver">🇺🇸 EN</a>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card-title">
+          <p class="blog-card-tag">Aprendizado</p>
+          <h3>Aprender a programar com quase 40: o que ninguém te conta</h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER — IDÊNTICO AO DA HOME ═══ -->
+<footer>
+  <p>&copy; 2025 Diego Torres. All rights reserved.</p>
+</footer>
+
+<script>
+  // Hero interativo igual ao da home (mouse/touch nos vídeos)
+  const blogHero = document.querySelector('.blog-hero');
+  const bv1 = document.getElementById('blog-video1');
+  const bv2 = document.getElementById('blog-video2');
+  const bFront = blogHero.querySelector('.hero-label.left');
+  const bBack  = blogHero.querySelector('.hero-label.right');
+
+  function toggleBlogHero(clientX) {
+    const mid = window.innerWidth / 2;
+    if (clientX < mid) {
+      bv1.classList.add('active');   bv1.play();
+      bv2.classList.remove('active'); bv2.pause();
+      bFront.classList.add('visible');
+      bBack.classList.remove('visible');
+    } else {
+      bv2.classList.add('active');   bv2.play();
+      bv1.classList.remove('active'); bv1.pause();
+      bBack.classList.add('visible');
+      bFront.classList.remove('visible');
+    }
+  }
+
+  blogHero.addEventListener('mousemove', e => toggleBlogHero(e.clientX));
+  blogHero.addEventListener('touchstart', e => toggleBlogHero(e.touches[0].clientX));
+  blogHero.addEventListener('mouseleave', () => {
+    bv1.pause(); bv2.pause();
+    bv1.classList.remove('active'); bv2.classList.remove('active');
+    bFront.classList.remove('visible'); bBack.classList.remove('visible');
+  });
+
+  window.addEventListener('load', () => {
+    bv1.play().catch(() => {});
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diego Torres | Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header id="header" class="show">
+  <nav class="container">
+    <ul class="menu">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#portfolio">Projetos</a></li>
+      <li><a href="blog.html" onclick="window.location='blog.html'; return false;">Blog</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="social-icons-header">
+      <a href="https://www.instagram.com/eu_torresdiego" target="_blank"><img src="imagens/logotipo-do-instagram.svg" alt="Instagram" /></a>
+      <a href="https://www.linkedin.com/in/diegotorres161186" target="_blank"><img src="imagens/linkedin.svg" alt="LinkedIn" /></a>
+      <a href="https://github.com/1DiegoTorres" target="_blank"><img src="imagens/github.svg" alt="GitHub" /></a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="video-container">
+    <video id="video1" src="videos/video1(1).mp4" autoplay muted loop playsinline></video>
+    <video id="video2" src="videos/video2(3).mp4" autoplay muted loop playsinline></video>
+    <div class="hero-label left">&lt;Front&gt;</div>
+    <div class="hero-label right">&lt;Back&gt;</div>
+    
+    <div class="hero-img-wrapper">
+      <img src="imagens/site.png" alt="Diego Torres" class="hero-img" />
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="container">
+    <h2>Últimos Projetos</h2>
+    <div class="portfolio-cards">
+
+     <div class="browser-card" id="card2">
+        <div class="iframe-wrapper">
+          <img id="iframe2" src="imagens/preview-somey.png" scrolling="no" tabindex="0" />
+        </div>
+        <div class="glass-wash"></div>
+        <div class="card-overlay"></div>
+        <div class="card-footer">
+          <div class="footer-glass"></div>
+          <div class="footer-content">
+            <div class="tech-tags">
+              <span class="tech-tag">Astro</span>
+              <span class="tech-tag">Tailwind CSS</span>
+            </div>
+            <a href="https://www.gruposomey.com.br/" target="_blank" class="btn-ver" onclick="event.stopPropagation()">Ver projeto →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="browser-card" id="card2">
+        <div class="iframe-wrapper">
+          <img id="iframe2" src="imagens/preview-solare.png" scrolling="no" tabindex="-1" />
+        </div>
+        <div class="glass-wash"></div>
+        <div class="card-overlay"></div>
+        <div class="card-footer">
+          <div class="footer-glass"></div>
+          <div class="footer-content">
+            <div class="tech-tags">
+              <span class="tech-tag">Magento 2.4</span>
+              <span class="tech-tag">Alpine.js</span>
+              <span class="tech-tag">Tailwind CSS</span>
+            </div>
+            <a href="https://www.oticasolare.com.br/" target="_blank" class="btn-ver" onclick="event.stopPropagation()">Ver projeto →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="sobre">
+  <div class="container">
+    <h2>Sobre</h2>
+    <p>
+      I transform ideas into interactive interfaces and efficient code. With a keen eye for both what the user sees and what happens behind the scenes, I am dedicated to creating systems that not only work perfectly but also delight those who use them.
+    </p>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="container">
+    <h2>Blog</h2>
+    <p class="blog-intro">Histórias reais de quem trocou o balcão pelo terminal.</p>
+    <div class="portfolio-cards">
+
+      <!-- Blog Card 1 -->
+      <div class="browser-card" onclick="window.location='blog/transicao-carreira-comercio-tech.html'" style="cursor:pointer;">
+        <div class="iframe-wrapper blog-thumb career"></div>
+        <div class="glass-wash"></div>
+        <div class="card-overlay"></div>
+        <div class="card-footer">
+          <div class="footer-glass"></div>
+          <div class="footer-content">
+            <div class="tech-tags">
+              <span class="tech-tag">Carreira</span>
+              <span class="tech-tag">⏱ 8 min</span>
+            </div>
+            <div class="blog-card-langs" onclick="event.stopPropagation()">
+              <a href="blog/transicao-carreira-comercio-tech.html" class="btn-ver">🇧🇷 PT</a>
+              <a href="blog/career-transition-retail-to-tech.html" class="btn-ver">🇺🇸 EN</a>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card-title">
+          <p class="blog-card-tag">Carreira</p>
+          <h3>Do comércio ao código: como dei adeus a 15 anos de vendas</h3>
+        </div>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="browser-card" onclick="window.location='blog/aprender-programacao-quase-40-anos.html'" style="cursor:pointer;">
+        <div class="iframe-wrapper blog-thumb age"></div>
+        <div class="glass-wash"></div>
+        <div class="card-overlay"></div>
+        <div class="card-footer">
+          <div class="footer-glass"></div>
+          <div class="footer-content">
+            <div class="tech-tags">
+              <span class="tech-tag">Aprendizado</span>
+              <span class="tech-tag">⏱ 10 min</span>
+            </div>
+            <div class="blog-card-langs" onclick="event.stopPropagation()">
+              <a href="blog/aprender-programacao-quase-40-anos.html" class="btn-ver">🇧🇷 PT</a>
+              <a href="blog/learning-programming-almost-40.html" class="btn-ver">🇺🇸 EN</a>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card-title">
+          <p class="blog-card-tag">Aprendizado</p>
+          <h3>Aprender a programar com quase 40: o que ninguém te conta</h3>
+        </div>
+      </div>
+
+    </div>
+    <a href="blog.html" class="btn-blog-all">Ver todos os posts →</a>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="container">
+    <h2>Contato</h2>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/eu_torresdiego" target="_blank"><img src="imagens/logotipo-do-instagram.svg" alt="Instagram" /></a>
+      <a href="https://www.linkedin.com/in/diegotorres161186" target="_blank"><img src="imagens/linkedin.svg" alt="LinkedIn" /></a>
+      <a href="https://github.com/1DiegoTorres" target="_blank"><img src="imagens/github.svg" alt="GitHub" /></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Diego Torres. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
