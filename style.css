@@ -156,12 +156,13 @@ video.active { opacity: 0.2; }
   overflow: hidden;
   border-radius: 20px;
 }
-.iframe-wrapper img {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  will-change: transform;
+.iframe-wrapper iframe {
+  width: 150%;
+  height: 860px;
+  border: none;
+  transform: scale(0.667);
+  transform-origin: top left;
+  pointer-events: none;
 }
 
 .glass-wash {
@@ -175,7 +176,7 @@ video.active { opacity: 0.2; }
 }
 
 .card-overlay {
-  position: absolute;
+  position: center;
   inset: 0;
   background: linear-gradient(
     to bottom,
@@ -331,4 +332,83 @@ footer {
   max-width: 700px;
   margin: 0 auto 20px;
   color: #444;
+}
+/* ─── BLOG SECTION NA HOME ─────────────────────────────────── */
+#blog {
+  padding: 100px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.blog-intro {
+  margin: 12px auto 40px;
+  color: #666;
+  font-size: 1rem;
+  max-width: 500px;
+}
+
+/* Thumb colorida dentro do iframe-wrapper */
+.blog-thumb {
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+}
+.blog-thumb.career {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+.blog-thumb.age {
+  background: linear-gradient(135deg, #2d1b00 0%, #4a2f00 60%, #6b4300 100%);
+}
+
+/* Título flutuando sobre o card (acima do footer) */
+.blog-card-title {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  padding: 20px 18px 0;
+  z-index: 3;
+  text-align: left;
+}
+.blog-card-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 6px;
+}
+.blog-card-title h3 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.4;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+}
+
+/* Langs lado a lado no footer */
+.blog-card-langs {
+  display: flex;
+  gap: 6px;
+}
+
+.btn-blog-all {
+  display: inline-block;
+  margin-top: 36px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: 1.5px solid #1a1a1a;
+  background: transparent;
+  color: #1a1a1a;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+.btn-blog-all:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .blog-card-title h3 { font-size: 0.82rem; }
 }
