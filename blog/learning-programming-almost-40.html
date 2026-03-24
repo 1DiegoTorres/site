@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learning to code at almost 40: what nobody tells you | Diego Torres</title>
+  <meta name="description" content="The real experience of learning web development as a self-taught person at almost 40, without an expensive bootcamp. What's hard, what surprises you, and why age becomes an advantage." />
+  <meta name="keywords" content="learning to code after 30, programming at 40, self-taught developer, career change to tech late, web development beginner" />
+  <meta property="og:title" content="Learning to code at almost 40: what nobody tells you" />
+  <meta property="og:description" content="No bootcamp, no CS degree, no child prodigy. Just YouTube, docs, errors and the stubbornness of someone who's seen hard things before." />
+  <meta property="og:type" content="article" />
+  <link rel="canonical" href="https://diegotorres.dev/blog/learning-programming-almost-40.html" />
+  <link rel="alternate" hreflang="en" href="learning-programming-almost-40.html" />
+  <link rel="alternate" hreflang="pt-BR" href="aprender-programacao-quase-40-anos.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Learning to code at almost 40: what nobody tells you",
+    "description": "The real experience of Diego Torres learning web development as a self-taught person at almost 40 years old.",
+    "author": { "@type": "Person", "name": "Diego Torres", "url": "https://diegotorres.dev" },
+    "datePublished": "2026-03-23",
+    "dateModified": "2026-03-23",
+    "inLanguage": "en",
+    "keywords": "programming, self-taught, age, career, developer"
+  }
+  </script>
+
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* ── POST ARTICLE STYLES ── */
+    .article-wrap { max-width: 720px; margin: 0 auto; padding: 140px 2rem 100px; }
+    .breadcrumb { display: flex; gap: 8px; align-items: center; font-size: 0.78rem; color: #666; margin-bottom: 2.5rem; }
+    .breadcrumb a { color: #666; text-decoration: none; }
+    .breadcrumb a:hover { color: #111; }
+    .breadcrumb span { color: #aaa; }
+    .lang-switcher { display: inline-flex; gap: 6px; background: rgba(0,0,0,0.04); border-radius: 30px; padding: 4px; margin-bottom: 2.5rem; }
+    .lang-switcher a { font-size: 0.75rem; font-weight: 600; padding: 6px 16px; border-radius: 30px; text-decoration: none; color: rgba(0,0,0,0.4); transition: all 0.2s; }
+    .lang-switcher a.active { background: #111; color: #fff; }
+    .post-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #999; margin-bottom: 1rem; display: block; }
+    .post-title { font-family: 'Lora', serif; font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 700; line-height: 1.2; color: #111; margin-bottom: 1.2rem; }
+    .post-subtitle { font-family: 'Lora', serif; font-size: 1.15rem; font-style: italic; color: #666; line-height: 1.7; margin-bottom: 2rem; }
+    .post-meta-bar { display: flex; gap: 20px; align-items: center; padding: 16px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; margin-bottom: 3rem; font-size: 0.8rem; color: #888; }
+    .post-meta-bar strong { color: #111; }
+    .post-content { line-height: 1.9; }
+    .post-content p { font-size: 1.05rem; color: #2a2a2a; margin-bottom: 1.6rem; }
+    .post-content h2 { font-family: 'Lora', serif; font-size: 1.5rem; font-weight: 700; color: #111; margin: 3rem 0 1.2rem; line-height: 1.3; }
+    .post-content blockquote { border-left: 3px solid #ccc; padding: 1rem 1.5rem; margin: 2.5rem 0; background: #f9f9f9; border-radius: 0 12px 12px 0; }
+    .post-content blockquote p { font-family: 'Lora', serif; font-style: italic; font-size: 1.1rem; color: #333; margin: 0; }
+    .post-content ul { list-style: none; margin: 1.5rem 0 2rem; padding: 0; }
+    .post-content ul li { padding: 0.4rem 0 0.4rem 1.5rem; position: relative; font-size: 1rem; color: #2a2a2a; }
+    .post-content ul li::before { content: "→"; position: absolute; left: 0; color: #aaa; font-weight: 700; }
+    .timeline { margin: 2.5rem 0; position: relative; }
+    .timeline::before { content: ""; position: absolute; left: 16px; top: 0; bottom: 0; width: 2px; background: #eee; }
+    .timeline-item { display: flex; gap: 20px; padding: 0 0 2rem 48px; position: relative; }
+    .timeline-dot { position: absolute; left: 8px; top: 4px; width: 18px; height: 18px; border-radius: 50%; background: #ccc; border: 3px solid #f5f3f0; box-shadow: 0 0 0 2px #ccc; }
+    .timeline-dot.final { background: #111; box-shadow: 0 0 0 2px #111; }
+    .timeline-year { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #aaa; margin-bottom: 4px; }
+    .timeline-title { font-weight: 700; font-size: 0.95rem; color: #111; margin-bottom: 4px; }
+    .timeline-desc { font-size: 0.88rem; color: #666; line-height: 1.6; }
+    .highlight-box { background: #f9f9f9; border: 1px solid #eee; border-radius: 16px; padding: 28px 32px; margin: 2.5rem 0; }
+    .highlight-box p { margin: 0; font-size: 1rem; }
+    .reality-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 2.5rem 0; }
+    .reality-card { background: #f9f9f9; border: 1px solid #eee; border-radius: 12px; padding: 20px; }
+    .reality-card.hard { border-top: 3px solid #e07070; }
+    .reality-card.good { border-top: 3px solid #70b370; }
+    .reality-card h4 { font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .reality-card.hard h4 { color: #c05050; }
+    .reality-card.good h4 { color: #4a934a; }
+    .reality-card ul { margin: 0; }
+    .reality-card ul li { font-size: 0.88rem; padding: 0.25rem 0 0.25rem 1.2rem; }
+    .reality-card ul li::before { content: "•"; }
+    .post-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid #eee; }
+    .post-nav-link { background: #f9f9f9; border: 1px solid #eee; border-radius: 12px; padding: 18px 20px; text-decoration: none; color: inherit; transition: all 0.25s; }
+    .post-nav-link:hover { border-color: #111; transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+    .post-nav-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #aaa; margin-bottom: 6px; }
+    .post-nav-title { font-family: "Lora", serif; font-size: 0.95rem; font-weight: 600; color: #111; line-height: 1.4; }
+    .post-nav-link.next { text-align: right; }
+    @media (max-width: 768px) { .article-wrap { padding: 120px 1.5rem 80px; } .reality-grid { grid-template-columns: 1fr; } .post-nav { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HEADER — IDÊNTICO AO DA HOME ═══ -->
+<header id="header" class="show">
+  <nav class="container">
+    <ul class="menu">
+      <li><a href="../index.html#sobre">About</a></li>
+      <li><a href="../index.html#portfolio">Works</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../index.html#contato">Contact</a></li>
+    </ul>
+    <div class="social-icons-header">
+      <a href="https://www.instagram.com/eu_torresdiego" target="_blank"><img src="../imagens/logotipo-do-instagram.svg" alt="Instagram" /></a>
+      <a href="https://www.linkedin.com/in/diegotorres161186" target="_blank"><img src="../imagens/linkedin.svg" alt="LinkedIn" /></a>
+      <a href="https://github.com/1DiegoTorres" target="_blank"><img src="../imagens/github.svg" alt="GitHub" /></a>
+    </div>
+  </nav>
+</header>
+
+<article class="article-wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">Home</a>
+    <span>/</span>
+    <a href="../blog.html">Blog</a>
+    <span>/</span>
+    Programming at almost 40
+  </nav>
+
+  <div class="lang-switcher">
+    <a href="aprender-programacao-quase-40-anos.html">🇧🇷 Português</a>
+    <a href="learning-programming-almost-40.html" class="active">🇺🇸 English</a>
+  </div>
+
+  <span class="post-tag">Learning</span>
+  <h1 class="post-title">Learning to code at almost 40: what nobody tells you</h1>
+  <p class="post-subtitle">No expensive bootcamp, no CS degree. Just YouTube, documentation, errors and the stubbornness of someone who's seen hard things before.</p>
+
+  <div class="post-meta-bar">
+    <span>By <strong>Diego Torres</strong></span>
+    <span>·</span>
+    <span>March 2026</span>
+    <span>·</span>
+    <span>⏱ 10 min read</span>
+  </div>
+
+  <div class="post-content">
+
+    <p>There's a very convenient narrative about learning to code: brilliant young person, 12-week bootcamp, startup job. Good story. It's just not mine.</p>
+
+    <p>Mine is different: almost 40, coming from retail, learning on YouTube at 11pm after a long day, with the constant feeling of arriving late to a party that started without me.</p>
+
+    <p>But here's what I discovered: arriving later has sides that nobody talks about — and some of them are real advantages.</p>
+
+    <blockquote>
+      <p>"The question isn't whether you're too old to learn. It's whether you're willing to feel stupid again — for long enough."</p>
+    </blockquote>
+
+    <h2>The beginning: a black terminal and a blinking cursor</h2>
+
+    <p>My first real contact with code was in 2025. Not pseudocode, not Scratch, nothing visual. HTML, CSS, then JavaScript. Terminal open. Cursor blinking. And me, staring at the screen like it had sent me a message in another language — because it had.</p>
+
+    <p>The first week was total strangeness. Not quitting — strangeness. I knew it would be hard. What I didn't know is that hard has different flavors when you're almost 40.</p>
+
+    <h2>What's harder with age</h2>
+
+    <p>I'll be honest here, because this post only makes sense if it's honest.</p>
+
+    <div class="reality-grid">
+      <div class="reality-card hard">
+        <h4>😤 What weighs more</h4>
+        <ul>
+          <li>Impatience with your own progress</li>
+          <li>Comparing your beginning to others' middle</li>
+          <li>Accumulated fatigue (family, work, study)</li>
+          <li>More intense impostor syndrome</li>
+          <li>Less tolerance for immediate frustration</li>
+        </ul>
+      </div>
+      <div class="reality-card good">
+        <h4>💪 What gets easier</h4>
+        <ul>
+          <li>Knowing that process takes time</li>
+          <li>Discipline built over years of work</li>
+          <li>Business vision and real context</li>
+          <li>Communication with clients and teams</li>
+          <li>Not giving up at the first difficulty</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>The impatience is real. You watch a tutorial and think "why don't I get this? That guy is 24." But then you remember you've learned hard things before. You learned to deal with angry customers. With impossible targets. With the pressure of a payroll you had to cover yourself. Code is hard, but it's not the kind of hard that will destroy you.</p>
+
+    <h2>How I learned: informal method, real results</h2>
+
+    <p>My process wasn't glamorous. It wasn't curated. It was this:</p>
+
+    <ul>
+      <li>YouTube as the entry point — Traversy Media, Kevin Powell, Fireship</li>
+      <li>MDN documentation for HTML, CSS and JS</li>
+      <li>Real projects early — not making to-do lists for 3 months</li>
+      <li>Error, search the error, understand the error, move forward</li>
+      <li>AI as a pair programmer — not to copy code, but to understand what was wrong</li>
+    </ul>
+
+    <p>What worked best? Projects with purpose. When I started building real sites for real clients — with real briefs, real deadlines, real feedback — the learning accelerated in a way no tutorial could match.</p>
+
+    <blockquote>
+      <p>"I learned more in one week with a real client than in a month of tutorials."</p>
+    </blockquote>
+
+    <h2>Impostor syndrome at almost 40</h2>
+
+    <p>There's a specific way impostor syndrome works when you're changing careers later. It doesn't just say "you're not good enough." It says: "you don't have enough time to get good."</p>
+
+    <p>It's a different kind of pressure. You calculate: "if it takes me 3 years to get good, I'll be 42. Is it worth it?" And then you need to answer honestly: you'll be 42 anyway. The question is whether you'll be 42 doing what you wanted or not.</p>
+
+    <div class="highlight-box">
+      <p>📊 <strong>My journey numbers:</strong> started studying in early 2025 → internship in November 2025 → hired full-time in February 2026. Less than a year from zero to employed in tech. Not because I'm exceptional — because I was consistent.</p>
+    </div>
+
+    <h2>What retail gave me that accelerated everything</h2>
+
+    <p>This is the part few people talk about — and that I needed to understand about myself: my previous experience wasn't an obstacle. It was a hidden asset.</p>
+
+    <p>Fifteen years listening to customers made me someone who thinks about UX instinctively. I know what frustrates users. I know what confuses them. I know what makes someone abandon a flow before converting.</p>
+
+    <p>Years of management gave me scope vision, deadline awareness, stakeholder communication. I walk into client meetings without freezing — while junior devs sometimes struggle with that part.</p>
+
+    <blockquote>
+      <p>"You don't start from zero. You start with everything you've already learned — and learn to code on top of that."</p>
+    </blockquote>
+
+    <h2>For those thinking about starting now</h2>
+
+    <p>If you're 35, 38, 42 and thinking "is it still too late" — let me tell you what I wish I'd heard earlier:</p>
+
+    <ul>
+      <li>There's no "too late" for learning to code</li>
+      <li>You don't need an expensive bootcamp to break into tech</li>
+      <li>Your life experience is a differentiator, not a disadvantage</li>
+      <li>The market doesn't reject you for your age — it rejects you for lack of portfolio</li>
+      <li>Build real things. Show the process. Write about what you learn.</li>
+    </ul>
+
+    <p>I'm still learning. I'll be learning for a long time. And that, I discovered, isn't weakness — it's the nature of the profession. A developer who stops learning stops growing. In that sense, arriving later is almost an advantage: you don't have time to think you already know everything.</p>
+
+  </div>
+
+  <nav class="post-nav">
+    <a href="career-transition-retail-to-tech.html" class="post-nav-link">
+      <div class="post-nav-label">← Previous post</div>
+      <div class="post-nav-title">From retail to code: how I left 15 years of sales behind</div>
+    </a>
+    <div></div>
+  </nav>
+
+</article>
+
+<!-- ═══ FOOTER — IDÊNTICO AO DA HOME ═══ -->
+<footer>
+  <p>&copy; 2025 Diego Torres. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

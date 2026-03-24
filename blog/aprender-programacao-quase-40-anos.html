@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aprender a programar com quase 40: o que ninguém te conta | Diego Torres</title>
+  <meta name="description" content="A experiência real de aprender desenvolvimento web sendo autodidata, com quase 40 anos, sem bootcamp caro. O que é difícil, o que surpreende, e por que a idade vira vantagem." />
+  <meta name="keywords" content="aprender programação depois dos 30, programar com 40 anos, autodidata programação, desenvolvimento web iniciante, transição de carreira tech tarde" />
+  <meta property="og:title" content="Aprender a programar com quase 40: o que ninguém te conta" />
+  <meta property="og:description" content="Sem bootcamp, sem faculdade de TI, sem jovem prodígio. Só YouTube, docs, erro e a teimosia de quem já viu coisa difícil antes." />
+  <meta property="og:type" content="article" />
+  <link rel="canonical" href="https://diegotorres.dev/blog/aprender-programacao-quase-40-anos.html" />
+  <link rel="alternate" hreflang="pt-BR" href="aprender-programacao-quase-40-anos.html" />
+  <link rel="alternate" hreflang="en" href="learning-programming-almost-40.html" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Aprender a programar com quase 40: o que ninguém te conta",
+    "description": "A experiência real de Diego Torres aprendendo desenvolvimento web de forma autodidata com quase 40 anos.",
+    "author": { "@type": "Person", "name": "Diego Torres", "url": "https://diegotorres.dev" },
+    "datePublished": "2026-03-23",
+    "dateModified": "2026-03-23",
+    "inLanguage": "pt-BR",
+    "keywords": "programação, autodidata, idade, carreira, desenvolvedor"
+  }
+  </script>
+
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* ── POST ARTICLE STYLES ── */
+    .article-wrap { max-width: 720px; margin: 0 auto; padding: 140px 2rem 100px; }
+    .breadcrumb { display: flex; gap: 8px; align-items: center; font-size: 0.78rem; color: #666; margin-bottom: 2.5rem; }
+    .breadcrumb a { color: #666; text-decoration: none; }
+    .breadcrumb a:hover { color: #111; }
+    .breadcrumb span { color: #aaa; }
+    .lang-switcher { display: inline-flex; gap: 6px; background: rgba(0,0,0,0.04); border-radius: 30px; padding: 4px; margin-bottom: 2.5rem; }
+    .lang-switcher a { font-size: 0.75rem; font-weight: 600; padding: 6px 16px; border-radius: 30px; text-decoration: none; color: rgba(0,0,0,0.4); transition: all 0.2s; }
+    .lang-switcher a.active { background: #111; color: #fff; }
+    .post-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #999; margin-bottom: 1rem; display: block; }
+    .post-title { font-family: 'Lora', serif; font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 700; line-height: 1.2; color: #111; margin-bottom: 1.2rem; }
+    .post-subtitle { font-family: 'Lora', serif; font-size: 1.15rem; font-style: italic; color: #666; line-height: 1.7; margin-bottom: 2rem; }
+    .post-meta-bar { display: flex; gap: 20px; align-items: center; padding: 16px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; margin-bottom: 3rem; font-size: 0.8rem; color: #888; }
+    .post-meta-bar strong { color: #111; }
+    .post-content { line-height: 1.9; }
+    .post-content p { font-size: 1.05rem; color: #2a2a2a; margin-bottom: 1.6rem; }
+    .post-content h2 { font-family: 'Lora', serif; font-size: 1.5rem; font-weight: 700; color: #111; margin: 3rem 0 1.2rem; line-height: 1.3; }
+    .post-content blockquote { border-left: 3px solid #ccc; padding: 1rem 1.5rem; margin: 2.5rem 0; background: #f9f9f9; border-radius: 0 12px 12px 0; }
+    .post-content blockquote p { font-family: 'Lora', serif; font-style: italic; font-size: 1.1rem; color: #333; margin: 0; }
+    .post-content ul { list-style: none; margin: 1.5rem 0 2rem; padding: 0; }
+    .post-content ul li { padding: 0.4rem 0 0.4rem 1.5rem; position: relative; font-size: 1rem; color: #2a2a2a; }
+    .post-content ul li::before { content: "→"; position: absolute; left: 0; color: #aaa; font-weight: 700; }
+    .timeline { margin: 2.5rem 0; position: relative; }
+    .timeline::before { content: ""; position: absolute; left: 16px; top: 0; bottom: 0; width: 2px; background: #eee; }
+    .timeline-item { display: flex; gap: 20px; padding: 0 0 2rem 48px; position: relative; }
+    .timeline-dot { position: absolute; left: 8px; top: 4px; width: 18px; height: 18px; border-radius: 50%; background: #ccc; border: 3px solid #f5f3f0; box-shadow: 0 0 0 2px #ccc; }
+    .timeline-dot.final { background: #111; box-shadow: 0 0 0 2px #111; }
+    .timeline-year { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #aaa; margin-bottom: 4px; }
+    .timeline-title { font-weight: 700; font-size: 0.95rem; color: #111; margin-bottom: 4px; }
+    .timeline-desc { font-size: 0.88rem; color: #666; line-height: 1.6; }
+    .highlight-box { background: #f9f9f9; border: 1px solid #eee; border-radius: 16px; padding: 28px 32px; margin: 2.5rem 0; }
+    .highlight-box p { margin: 0; font-size: 1rem; }
+    .reality-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 2.5rem 0; }
+    .reality-card { background: #f9f9f9; border: 1px solid #eee; border-radius: 12px; padding: 20px; }
+    .reality-card.hard { border-top: 3px solid #e07070; }
+    .reality-card.good { border-top: 3px solid #70b370; }
+    .reality-card h4 { font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+    .reality-card.hard h4 { color: #c05050; }
+    .reality-card.good h4 { color: #4a934a; }
+    .reality-card ul { margin: 0; }
+    .reality-card ul li { font-size: 0.88rem; padding: 0.25rem 0 0.25rem 1.2rem; }
+    .reality-card ul li::before { content: "•"; }
+    .post-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid #eee; }
+    .post-nav-link { background: #f9f9f9; border: 1px solid #eee; border-radius: 12px; padding: 18px 20px; text-decoration: none; color: inherit; transition: all 0.25s; }
+    .post-nav-link:hover { border-color: #111; transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+    .post-nav-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #aaa; margin-bottom: 6px; }
+    .post-nav-title { font-family: "Lora", serif; font-size: 0.95rem; font-weight: 600; color: #111; line-height: 1.4; }
+    .post-nav-link.next { text-align: right; }
+    @media (max-width: 768px) { .article-wrap { padding: 120px 1.5rem 80px; } .reality-grid { grid-template-columns: 1fr; } .post-nav { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HEADER — IDÊNTICO AO DA HOME ═══ -->
+<header id="header" class="show">
+  <nav class="container">
+    <ul class="menu">
+      <li><a href="../index.html#sobre">About</a></li>
+      <li><a href="../index.html#portfolio">Works</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+      <li><a href="../index.html#contato">Contact</a></li>
+    </ul>
+    <div class="social-icons-header">
+      <a href="https://www.instagram.com/eu_torresdiego" target="_blank"><img src="../imagens/logotipo-do-instagram.svg" alt="Instagram" /></a>
+      <a href="https://www.linkedin.com/in/diegotorres161186" target="_blank"><img src="../imagens/linkedin.svg" alt="LinkedIn" /></a>
+      <a href="https://github.com/1DiegoTorres" target="_blank"><img src="../imagens/github.svg" alt="GitHub" /></a>
+    </div>
+  </nav>
+</header>
+
+<article class="article-wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../index.html">Home</a>
+    <span>/</span>
+    <a href="../blog.html">Blog</a>
+    <span>/</span>
+    Programar com quase 40
+  </nav>
+
+  <div class="lang-switcher">
+    <a href="aprender-programacao-quase-40-anos.html" class="active">🇧🇷 Português</a>
+    <a href="learning-programming-almost-40.html">🇺🇸 English</a>
+  </div>
+
+  <span class="post-tag">Aprendizado</span>
+  <h1 class="post-title">Aprender a programar com quase 40: o que ninguém te conta</h1>
+  <p class="post-subtitle">Sem bootcamp caro, sem faculdade de TI. Só YouTube, documentação, erro e a teimosia de quem já viu coisa difícil antes.</p>
+
+  <div class="post-meta-bar">
+    <span>Por <strong>Diego Torres</strong></span>
+    <span>·</span>
+    <span>Março de 2026</span>
+    <span>·</span>
+    <span>⏱ 10 min de leitura</span>
+  </div>
+
+  <div class="post-content">
+
+    <p>Existe uma narrativa muito conveniente sobre aprender a programar: jovem brilhante, bootcamp de 12 semanas, emprego em startup. Boa história. Só não é a minha.</p>
+
+    <p>A minha é outra: quase 40 anos, vindo do comércio, aprendendo no YouTube às 23h depois de um dia longo, com aquela sensação constante de que estou chegando tarde em uma festa que começou sem mim.</p>
+
+    <p>Mas aqui está o que eu descobri: chegar mais tarde tem lados que ninguém conta — e alguns deles são vantagens reais.</p>
+
+    <blockquote>
+      <p>"A pergunta não é se você é velho demais para aprender. É se você está disposto a se sentir idiota de novo — por tempo suficiente."</p>
+    </blockquote>
+
+    <h2>O começo: o terminal preto e o cursor piscando</h2>
+
+    <p>Meu primeiro contato real com código foi em 2025. Não com pseudocódigo, não com Scratch, não com nada visual. HTML, CSS, depois JavaScript. O terminal aberto. O cursor piscando. E eu, olhando pra tela como se ela tivesse me mandado uma mensagem em outro idioma — porque tinha.</p>
+
+    <p>A primeira semana foi de estranheza total. Não de desistência — estranheza. Eu sabia que ia ser difícil. O que eu não sabia é que difícil tem sabores diferentes quando você tem quase 40 anos.</p>
+
+    <h2>O que é mais difícil com a idade</h2>
+
+    <p>Vou ser honesto aqui, porque esse post só faz sentido se for honesto.</p>
+
+    <div class="reality-grid">
+      <div class="reality-card hard">
+        <h4>😤 O que pesa mais</h4>
+        <ul>
+          <li>Impaciência com o próprio progresso</li>
+          <li>Comparar seu início com o meio dos outros</li>
+          <li>Cansaço acumulado (família, trabalho, estudo)</li>
+          <li>Síndrome do impostor mais intensa</li>
+          <li>Menos tolerância à frustração imediata</li>
+        </ul>
+      </div>
+      <div class="reality-card good">
+        <h4>💪 O que fica mais fácil</h4>
+        <ul>
+          <li>Saber que processo leva tempo</li>
+          <li>Disciplina construída em anos de trabalho</li>
+          <li>Visão de negócio e contexto real</li>
+          <li>Comunicação com clientes e equipe</li>
+          <li>Não desistir na primeira dificuldade</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>A impaciência é real. Você olha para um tutorial e pensa "por que não tô entendendo isso? Esse cara tem 24 anos." Mas aí você lembra que já aprendeu coisas difíceis antes. Você aprendeu a lidar com cliente bravo. Com meta impossível. Com a pressão de uma folha de pagamento que você mesmo tinha que pagar. Código é difícil, mas não é o tipo de difícil que vai te destruir.</p>
+
+    <h2>Como eu aprendi: método informal, resultado real</h2>
+
+    <p>Meu processo não foi glamouroso. Não foi curado. Foi isso:</p>
+
+    <ul>
+      <li>YouTube como ponto de entrada — canal Filipe Deschamps, Rocketseat, Traversy Media</li>
+      <li>Documentação da MDN para HTML, CSS e JS</li>
+      <li>Projetos reais desde cedo — nada de fazer to-do list por 3 meses</li>
+      <li>Errar, pesquisar o erro, entender o erro, seguir em frente</li>
+      <li>ChatGPT como par de programação — não para copiar código, mas para entender o que estava errado</li>
+    </ul>
+
+    <p>O que funcionou melhor? Projetos com propósito. Quando comecei a construir sites para clientes reais — com briefing real, prazo real, feedback real — o aprendizado acelerou de um jeito que nenhum tutorial conseguiu.</p>
+
+    <blockquote>
+      <p>"Aprendi mais em uma semana com um cliente real do que em um mês de tutorial."</p>
+    </blockquote>
+
+    <h2>A síndrome do impostor com quase 40</h2>
+
+    <p>Tem um jeito específico que a síndrome do impostor age quando você está mudando de carreira mais tarde. Ela não diz só "você não é bom o suficiente." Ela diz: "você não tem tempo suficiente para ficar bom."</p>
+
+    <p>É uma pressão diferente. Você calcula: "se eu levar 3 anos para ficar bom, vou ter 42. Vale a pena?" E aí você precisa responder honestamente: vai ter 42 de qualquer jeito. A questão é se vai ter 42 fazendo o que queria ou não.</p>
+
+    <div class="highlight-box">
+      <p>📊 <strong>Os números da minha jornada:</strong> início dos estudos em 2025 → estágio em novembro de 2025 → efetivado em fevereiro de 2026. Menos de um ano do zero até CLT na área. Não porque sou exceção — porque fui consistente.</p>
+    </div>
+
+    <h2>O que o comércio me deu que acelerou tudo</h2>
+
+    <p>Isso é a parte que pouca gente fala e que eu precisava entender sobre mim mesmo: minha experiência anterior não era um obstáculo. Era um ativo escondido.</p>
+
+    <p>Quinze anos ouvindo cliente me tornaram alguém que pensa em UX de forma instintiva. Sei o que frustra o usuário. Sei o que confunde. Sei o que faz alguém desistir de um fluxo antes de converter.</p>
+
+    <p>Anos de gestão me deram visão de escopo, de prazo, de comunicação com stakeholder. Entro em reunião com cliente sem tremer — enquanto dev junior às vezes trava nessa parte.</p>
+
+    <p>A hamburgueria me ensinou sobre custo de manutenção, sobre o peso de uma decisão técnica ruim, sobre pensar em escalabilidade antes de construir.</p>
+
+    <blockquote>
+      <p>"Você não começa do zero. Você começa com tudo que já aprendeu — e aprende a codificar por cima disso."</p>
+    </blockquote>
+
+    <h2>O que me manteve indo</h2>
+
+    <p>Não foi motivação. Motivação é intermitente. O que me manteve foi algo mais simples e mais duro: consistência sem glamour.</p>
+
+    <p>Estudar quando não estava com vontade. Abrir o editor quando o código do dia anterior tinha quebrado tudo e eu não sabia por quê. Fazer mais um projeto quando o mais fácil seria assistir série.</p>
+
+    <p>E também: ter um porquê claro. Não "quero ganhar mais dinheiro" — isso cansa rápido. Mas "quero construir coisas que as pessoas usam." Isso sustenta.</p>
+
+    <h2>Para quem está pensando em começar agora</h2>
+
+    <p>Se você tem 35, 38, 42 anos e está pensando "será que ainda dá tempo" — te digo o que eu gostaria de ter ouvido mais cedo:</p>
+
+    <ul>
+      <li>Não existe "tarde demais" para aprender a programar</li>
+      <li>Você não precisa de bootcamp caro para entrar na área</li>
+      <li>Sua experiência de vida é diferencial, não desvantagem</li>
+      <li>O mercado não te descarta pela idade — te descarta pela falta de portfólio</li>
+      <li>Construa coisas reais. Mostre o processo. Escreva sobre o que aprende.</li>
+    </ul>
+
+    <p>E se tiver dúvida sobre por onde começar: HTML, CSS, JavaScript. Nessa ordem. Sem pular etapas. Sem framework antes de entender o básico. E com projetos reais o mais cedo possível.</p>
+
+    <p>Ainda estou aprendendo. Vou estar aprendendo por muito tempo. E isso, descobri, não é fraqueza — é a natureza da profissão. Desenvolvedor que para de aprender para de crescer. Nesse sentido, chegar mais tarde é quase uma vantagem: você não tem tempo de achar que já sabe tudo.</p>
+
+  </div>
+
+  <nav class="post-nav">
+    <a href="transicao-carreira-comercio-tech.html" class="post-nav-link">
+      <div class="post-nav-label">← Post anterior</div>
+      <div class="post-nav-title">Do comércio ao código: como dei adeus a 15 anos de vendas</div>
+    </a>
+    <div></div>
+  </nav>
+
+</article>
+
+<!-- ═══ FOOTER — IDÊNTICO AO DA HOME ═══ -->
+<footer>
+  <p>&copy; 2025 Diego Torres. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
